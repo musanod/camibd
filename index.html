@@ -10,6 +10,7 @@
             padding: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #000;
@@ -53,7 +54,7 @@
         function checkCode() {
             var codeInput = document.getElementById('code-input').value;
             if (codeInput === 'il_tuo_codice_preimpostato') {
-                alert('Codice valido! Congratulazioni.');
+                window.location.href = 'win.html';
             } else {
                 document.getElementById('error-message').style.display = 'block';
             }
