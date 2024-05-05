@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Codice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifica Codice</h1>
+    <form id="code-form">
+        <label for="code">Inserisci il codice:</label><br>
+        <input type="text" id="code" name="code"><br>
+        <button type="submit">Verifica</button>
+    </form>
+    <div id="error-message">Codice non valido. Riprova.</div>
+    <div id="success-message" style="display:none;">Codice valido! Congratulazioni.</div>
+
+    <script>
+        document.getElementById('code-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var codeInput = document.getElementById('code').value;
+            if (codeInput === 'il_tuo_codice_preimpostato') {
+                document.getElementById('error-message').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+                document.getElementById('success-message').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
