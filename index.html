@@ -10,7 +10,7 @@
             padding: 0;
             height: 100vh;
             display: flex;
-            flex-direction: column-reverse; /* Cambio qui */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #000;
@@ -36,12 +36,12 @@
         #icon {
             width: 50px;
             height: 50px;
-            align-self: center; /* Cambio qui */
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="icon"><a href="map.png"><img src="maps.png"></a></div><br>
+    <img id="icon" src="maps.png" alt="icona mappa">
     <input type="text" id="code-input" placeholder="Inserisci il codice">
     <div id="error-message">Codice non valido. Riprova.</div>
 
